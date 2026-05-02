@@ -1,11 +1,10 @@
 import MainLayout from '../layouts/MainLayout'
+import Hero from '../sections/Hero'
 
 const Home = () => {
   return (
     <MainLayout>
-      <div className="pt-32">
-        Home Page
-      </div>
+      <Hero />
     </MainLayout>
   )
 }
