@@ -7,6 +7,7 @@ const Home = () => {
     <MainLayout>
       <Hero />
       <About />
+      <Skills />
     </MainLayout>
   )
 }
