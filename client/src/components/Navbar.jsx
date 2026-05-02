@@ -1,0 +1,17 @@
+const Navbar = () => {
+  return (
+    <nav className="fixed top-0 w-full bg-slate-950/80 backdrop-blur-md border-b border-slate-800 z-50">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between">
+        <h1 className="font-bold text-xl">Fahmi.dev</h1>
+
+        <ul className="flex gap-6">
+          <li>About</li>
+          <li>Projects</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </nav>
+  )
+}
+
+export default Navbar
