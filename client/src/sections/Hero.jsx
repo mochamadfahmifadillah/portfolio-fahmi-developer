@@ -16,7 +16,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="text-sky-400 font-medium mb-4"
           >
-            Fullstack JavaScript Developer
+            Hello, I'm Fahmi
           </motion.p>
 
           <motion.h1
@@ -25,9 +25,7 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="text-5xl md:text-7xl font-bold leading-tight text-white"
           >
-            Building Modern
-            <br />
-            Web Experiences
+            Software Development
           </motion.h1>
 
           <motion.p
