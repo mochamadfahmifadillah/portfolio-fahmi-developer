@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import profile from '../assets/profile-fahmi.png' // ✅ FIX IMPORT
 
 /* From uiverse.io by @FrM-bot */
 const Hero = () => {
@@ -53,10 +54,7 @@ const Hero = () => {
             </button>
           </motion.div>
 
-          <p className="text-xs text-slate-600 mt-10">
-            From uiverse.io by @FrM-bot
-          </p>
-
+          {/* From uiverse.io by @FrM-bot */}
         </div>
 
         {/* RIGHT CARD */}
@@ -66,42 +64,46 @@ const Hero = () => {
           transition={{ duration: 0.6 }}
           className="flex justify-center md:justify-end"
         >
-
-          <div className="
-            w-[260px] md:w-[340px]
-            relative
-            rounded-[0.5rem_2rem]
-            shadow-[0_15px_30px_-5px_rgba(0,0,0,0.6)]
-            transition-all duration-300
-            hover:scale-[1.05]
-          ">
+          <div
+            className="
+              w-[260px] md:w-[340px]
+              relative
+              rounded-[0.5rem_2rem]
+              shadow-[0_15px_30px_-5px_rgba(0,0,0,0.6)]
+              transition-all duration-300
+              hover:scale-[1.05]
+            "
+          >
 
             {/* IMAGE */}
-            <div className="h-[340px] md:h-[430px] overflow-hidden rounded-[0.5rem_2rem] grid">
-
-              <div className="w-full h-full bg-gradient-to-r from-[#33001b] to-[#ff0084] transition-all duration-300 hover:scale-125" />
-
+            <div className="h-[340px] md:h-[430px] overflow-hidden rounded-[0.5rem_2rem]">
+              <img
+                src={profile} 
+                alt="Fahmi"
+                className="w-full h-full object-cover transition-all duration-300 hover:scale-125"
+              />
             </div>
 
             {/* DESCRIPTION */}
-            <div className="
-              absolute bottom-3 left-3
-              w-[92%]
-              px-4 py-2
-              text-left
-              backdrop-blur-[3px]
-              bg-black/20
-              rounded-[0.5rem_2rem]
-              transition-all duration-500
-              hover:translate-x-2 hover:rotate-[3deg]
-            ">
+            <div
+              className="
+                absolute bottom-3 left-3
+                w-[92%]
+                px-4 py-2
+                text-left
+                backdrop-blur-[3px]
+                bg-black/20
+                rounded-[0.5rem_2rem]
+                transition-all duration-500
+                hover:translate-x-2 hover:rotate-[3deg]
+              "
+            >
               <h3 className="text-white text-sm font-semibold">
-                Kirava Logistics
+                Mochamad Fahmi Fadillah
               </h3>
             </div>
 
           </div>
-
         </motion.div>
 
       </div>
