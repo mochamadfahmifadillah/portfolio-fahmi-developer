@@ -4,6 +4,7 @@ import About from '../sections/About'
 import Skills from '../sections/Skills'
 import Projects from '../sections/Projects'
 import Contact from '../sections/Contact'
+import Certificates from '../sections/Certificate'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <About />
       <Skills />
       <Projects />
+      <Certificates />
       <Contact />
     </MainLayout>
   )
