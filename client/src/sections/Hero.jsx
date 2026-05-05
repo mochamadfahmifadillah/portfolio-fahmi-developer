@@ -78,7 +78,7 @@ const Hero = () => {
 
   {/* LINKEDIN */}
   <a
-    href="https://linkedin.com/"
+    href="https://www.linkedin.com/in/mochamad-fahmi-fadillah/"
     target="_blank"
     className="
       w-[70px] h-[70px]
@@ -100,7 +100,7 @@ const Hero = () => {
 
   {/* GITHUB */}
   <a
-    href="https://github.com/"
+    href="https://github.com/mochamadfahmifadillah/"
     target="_blank"
     className="
       w-[70px] h-[70px]
