@@ -41,6 +41,19 @@ const Navbar = () => {
             Projects
           </button>
 
+          {/* Certificates */}
+          <button className="
+            flex items-center gap-2
+            px-4 py-2 rounded-lg text-sm font-bold uppercase
+            text-[#333]
+            bg-[#e4e4e4]
+            shadow-[inset_5px_5px_5px_#c4c4c4,inset_-5px_-5px_5px_#ffffff]
+            transition
+            hover:bg-[#333] hover:text-white hover:shadow-none
+          ">
+            Certificates
+          </button>
+
           {/* CONTACT */}
           <button className="
             flex items-center gap-2

@@ -1,7 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import profile from '../assets/profile-fahmi.png' // ✅ FIX IMPORT
-
+import linkedin from '../assets/linkedin.svg'
+import github from '../assets/github.svg'
 /* From uiverse.io by @FrM-bot */
 
 const Hero = () => {
@@ -68,20 +69,58 @@ const Hero = () => {
             Node.js, and clean architecture.
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mt-8 flex justify-center md:justify-start gap-4 flex-wrap"
-          >
-            <button className="bg-sky-500 hover:bg-sky-600 px-6 py-3 rounded-xl font-semibold transition">
-              View Projects
-            </button>
+         <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="mt-10 flex justify-center md:justify-start gap-8"
+>
 
-            <button className="border border-slate-700 hover:border-slate-500 px-6 py-3 rounded-xl transition">
-              Contact Me
-            </button>
-          </motion.div>
+  {/* LINKEDIN */}
+  <a
+    href="https://linkedin.com/"
+    target="_blank"
+    className="
+      w-[70px] h-[70px]
+      bg-white
+      rounded-full
+      flex items-center justify-center
+      shadow-[0_0_20px_rgba(0,0,0,0.5)]
+      transition-all duration-500
+      hover:scale-[1.3] hover:-rotate-[360deg] hover:-translate-y-3
+    "
+    style={{ animation: "sway 2s infinite alternate" }}
+  >
+    <img
+      src={linkedin}
+      alt="LinkedIn"
+      className="w-8 h-8 transition-all duration-500 hover:scale-125"
+    />
+  </a>
+
+  {/* GITHUB */}
+  <a
+    href="https://github.com/"
+    target="_blank"
+    className="
+      w-[70px] h-[70px]
+      bg-white
+      rounded-full
+      flex items-center justify-center
+      shadow-[0_0_20px_rgba(0,0,0,0.5)]
+      transition-all duration-500
+      hover:scale-[1.3] hover:-rotate-[360deg] hover:-translate-y-3
+    "
+    style={{ animation: "sway 2s infinite alternate" }}
+  >
+    <img
+      src={github}
+      alt="GitHub"
+      className="w-8 h-8 transition-all duration-500 hover:scale-125"
+    />
+  </a>
+
+</motion.div>
 
         </div>
 
