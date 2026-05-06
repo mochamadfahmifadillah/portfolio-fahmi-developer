@@ -1,8 +1,24 @@
-const skills = {
-  frontend: ['HTML', 'CSS', 'JavaScript', 'React'],
-  backend: ['Node.js', 'Express', 'MongoDB', 'REST API'],
-  tools: ['Git', 'GitHub', 'Postman', 'Vite'],
-}
+import jsLogo from '../assets/javascript.svg'
+import reactLogo from '../assets/react.svg'
+import reduxLogo from '../assets/redux.svg'
+import nodeLogo from '../assets/nodejs.svg'
+import expressLogo from '../assets/express-js.svg'
+import mongoLogo from '../assets/mongo.svg'
+import gitLogo from '../assets/git.svg'
+import githubLogo from '../assets/github.svg'
+import postmanLogo from '../assets/postman.svg'
+
+const skills = [
+  { name: 'JavaScript', image: jsLogo },
+  { name: 'React', image: reactLogo },
+  { name: 'Redux', image: reduxLogo },
+  { name: 'Node.js', image: nodeLogo },
+  { name: 'Express', image: expressLogo },
+  { name: 'MongoDB', image: mongoLogo },
+  { name: 'Git', image: gitLogo },
+  { name: 'GitHub', image: githubLogo },
+  { name: 'Postman', image: postmanLogo },
+]
 
 const Skills = () => {
   return (
@@ -21,12 +37,10 @@ const Skills = () => {
         </div>
 
         {/* GRID */}
-        <div className="grid md:grid-cols-3 gap-10">
-
-          <SkillCard title="Frontend" items={skills.frontend} />
-          <SkillCard title="Backend" items={skills.backend} />
-          <SkillCard title="Tools" items={skills.tools} />
-
+        <div className="grid md:grid-cols-3 gap-8 justify-items-center">
+          {skills.map((skill) => (
+            <SkillCard key={skill.name} skill={skill} />
+          ))}
         </div>
 
       </div>
@@ -34,40 +48,48 @@ const Skills = () => {
   )
 }
 
-const SkillCard = ({ title, items }) => {
-  const colors = ['#c7c7ff', '#ffd8be', '#a9ecbf', '#f3bbe1']
-
+const SkillCard = ({ skill }) => {
   return (
-    <div className="text-white">
+    <div className="bg-sky-700 rounded-2xl shadow-sm shadow-sky-500">
 
-      {/* TITLE */}
-      <h3 className="text-2xl font-semibold mb-6 text-center">
-        {title}
-      </h3>
+      <div className="
+        group relative overflow-hidden
+        flex justify-center items-center
+        h-56 w-72
+        bg-neutral-900
+        rounded-2xl
+        outline outline-slate-400 -outline-offset-8
+        origin-bottom-right
+        transition-all duration-500
+        hover:rotate-12
 
-      {/* 2x2 GRID CARD STYLE */}
-      <div className="grid grid-cols-2 gap-3">
+        before:absolute before:w-12 before:h-12 before:bg-sky-400
+        before:rounded-full before:blur-xl
+        before:top-20 before:right-16
 
-        {items.slice(0, 4).map((item, index) => (
-          <div
-            key={item}
-            className="
-              w-full h-[110px]
-              rounded-xl
-              flex flex-col items-center justify-center
-              font-semibold text-black
-              transition-all duration-700
-              hover:scale-[1.6]
-              hover:rotate-180
-              cursor-pointer
-            "
-            style={{
-              background: colors[index % colors.length],
-            }}
-          >
-            {item}
-          </div>
-        ))}
+        after:absolute after:w-12 after:h-12 after:bg-sky-700
+        after:rounded-full after:blur-xl
+        after:bottom-32 after:right-16
+
+        hover:before:translate-y-12 hover:before:-translate-x-32
+        hover:after:translate-x-24
+      ">
+
+        <div className="z-10 flex flex-col items-center gap-3">
+
+          {/* LOGO */}
+          <img
+            src={skill.image}
+            alt={skill.name}
+            className="w-16 h-16 object-contain transition duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_10px_rgba(56,189,248,0.8)]"
+          />
+
+          {/* NAME */}
+          <p className="text-gray-50 text-sm">
+            {skill.name}
+          </p>
+
+        </div>
 
       </div>
     </div>
