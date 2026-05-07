@@ -2,7 +2,7 @@ import '../styles/loading.css'
 
 const Loading = () => {
   return (
-    <div className="h-screen flex items-center justify-center bg-slate-900">
+    <div className="h-screen flex items-center justify-center bg-[#362EED]/80">
       <div className="wheel-and-hamster">
         <div className="wheel"></div>
 

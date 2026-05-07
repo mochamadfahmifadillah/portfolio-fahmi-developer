@@ -1,52 +1,71 @@
 const ProjectCard = ({ project }) => {
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden hover:-translate-y-2 hover:border-sky-500/30 transition-all duration-300 shadow-lg">
+    <div className="card group">
+
+      {/* IMAGE */}
       <img
         src={project.image}
         alt={project.title}
-        className="w-full h-56 object-cover"
+        className="card__img"
       />
 
-      <div className="p-6">
-        <h3 className="text-2xl font-semibold text-white mb-3">
+      {/* CONTENT */}
+      <div className="card__descr-wrapper">
+
+        <h3 className="card__title">
           {project.title}
         </h3>
 
-        <p className="text-slate-400 leading-relaxed mb-5">
+        <p className="card__descr">
           {project.description}
         </p>
 
-        <div className="flex flex-wrap gap-2 mb-6">
+        {/* STACK */}
+        <div className="flex flex-wrap gap-2 mt-4">
           {project.stack.map((tech) => (
             <span
               key={tech}
-              className="bg-slate-800 text-slate-300 text-sm px-3 py-1 rounded-lg"
+              className="
+                text-[12px]
+                px-3 py-1
+                rounded-full
+                bg-[#362EED]/10
+                text-[#362EED]
+                font-semibold
+              "
             >
               {tech}
             </span>
           ))}
         </div>
 
-        <div className="flex gap-4">
+        {/* LINKS */}
+        <div className="card__links">
+
+          {/* LIVE DEMO */}
           <a
             href={project.demo}
             target="_blank"
             rel="noreferrer"
-            className="bg-sky-500 hover:bg-sky-600 px-4 py-2 rounded-xl text-sm font-medium transition"
+            className="link"
           >
             Live Demo
           </a>
 
+          {/* GITHUB */}
           <a
             href={project.github}
             target="_blank"
             rel="noreferrer"
-            className="border border-slate-700 hover:border-slate-500 px-4 py-2 rounded-xl text-sm transition"
+            className="link"
           >
             GitHub
           </a>
+
         </div>
+
       </div>
+
     </div>
   )
 }
