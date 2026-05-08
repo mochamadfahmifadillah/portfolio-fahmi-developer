@@ -5,6 +5,13 @@ import profile from '../assets/profile-fahmi.png'
 import linkedin from '../assets/linkedin.svg'
 import github from '../assets/github.svg'
 
+import {
+  FaTools,
+  FaBookOpen,
+  FaCode,
+  FaSeedling,
+} from 'react-icons/fa'
+
 const Hero = () => {
   const roles = [
     'Front End Developer',
@@ -190,103 +197,114 @@ const Hero = () => {
         </div>
 
         {/* STATS SECTION */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="
-            mt-30
-            grid grid-cols-2 md:grid-cols-4
-            gap-6
-          "
-        >
+ <motion.div
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  className="
+    mt-30
+    grid grid-cols-2 md:grid-cols-4
+    gap-6
+  "
+>
 
-          {/* CARD 1 */}
-          <div
-            className="
-              bg-white/90
-              backdrop-blur-md
-              rounded-2xl
-              h-44
-              flex flex-col
-              justify-center
-              items-center
-              text-neutral-700
-              shadow-xl
-              transition-all duration-500
-              hover:-translate-y-3
-              hover:shadow-2xl
-            "
-          >
-            <span className="text-5xl font-bold">34+</span>
-            <p className="mt-2 font-semibold">Projects</p>
-          </div>
+{/* CARD 1 */}
+<div
+  className="
+    bg-white
+    rounded-2xl
+    border-[3px]
+    border-[#000]
+    h-44
+    flex flex-col
+    justify-center
+    items-center
+    text-neutral-700
+    shadow-xl
+    transition-all
+    duration-500
+    hover:-translate-y-3
+    hover:shadow-2xl
+    hover:border-sky-500
+  "
+>
+  <FaTools className="text-5xl mb-3 text-[#362EED]" />
+  <p className="mt-2 font-bold text-[#362EED]">Building Skills</p>
+</div>
 
-          {/* CARD 2 */}
-          <div
-            className="
-              bg-white/90
-              backdrop-blur-md
-              rounded-2xl
-              h-44
-              flex flex-col
-              justify-center
-              items-center
-              text-neutral-700
-              shadow-xl
-              transition-all duration-500
-              hover:-translate-y-3
-              hover:shadow-2xl
-            "
-          >
-            <span className="text-5xl font-bold">2+</span>
-            <p className="mt-2 font-semibold">Years Experience</p>
-          </div>
+{/* CARD 2 */}
+<div
+  className="
+    bg-white
+    rounded-2xl
+    border-[3px]
+    border-[#000]
+    h-44
+    flex flex-col
+    justify-center
+    items-center
+    text-neutral-700
+    shadow-xl
+    transition-all
+    duration-500
+    hover:-translate-y-3
+    hover:shadow-2xl
+    hover:border-sky-500
+  "
+>
+<FaBookOpen className="text-5xl mb-3 text-[#362EED]" />
+<p className="mt-2 font-bold text-[#362EED]">Learning Everyday</p>
+</div>
 
-          {/* CARD 3 */}
-          <div
-            className="
-              bg-white/90
-              backdrop-blur-md
-              rounded-2xl
-              h-44
-              flex flex-col
-              justify-center
-              items-center
-              text-neutral-700
-              shadow-xl
-              transition-all duration-500
-              hover:-translate-y-3
-              hover:shadow-2xl
-            "
-          >
-            <span className="text-5xl font-bold">20+</span>
-            <p className="mt-2 font-semibold">Happy Clients</p>
-          </div>
+{/* CARD 3 */}
+<div
+  className="
+    bg-white
+    rounded-2xl
+    border-[3px]
+    border-[#000]
+    h-44
+    flex flex-col
+    justify-center
+    items-center
+    text-neutral-700
+    shadow-xl
+    transition-all
+    duration-500
+    hover:-translate-y-3
+    hover:shadow-2xl
+    hover:border-sky-500
+  "
+>
+  <FaCode className="text-5xl mb-3 text-[#362EED]" />
+  <p className="mt-2 font-bold text-[#362EED]">Development</p>
+</div>
 
-          {/* CARD 4 */}
-          <div
-            className="
-              bg-white/90
-              backdrop-blur-md
-              rounded-2xl
-              h-44
-              flex flex-col
-              justify-center
-              items-center
-              text-neutral-700
-              shadow-xl
-              transition-all duration-500
-              hover:-translate-y-3
-              hover:shadow-2xl
-            "
-          >
-            <span className="text-5xl font-bold">100%</span>
-            <p className="mt-2 font-semibold">Commitment</p>
-          </div>
+{/* CARD 4 */}
+<div
+  className="
+    bg-white
+    rounded-2xl
+    border-[3px]
+    border-[#000]
+    h-44
+    flex flex-col
+    justify-center
+    items-center
+    text-neutral-700
+    shadow-xl
+    transition-all
+    duration-500
+    hover:-translate-y-3
+    hover:shadow-2xl
+    hover:border-sky-500
+  "
+>
+  <FaSeedling className="text-5xl mb-3 text-[#362EED]" />
+  <p className="mt-2 font-bold text-[#362EED]">Growing Consistently</p>
+</div>
 
-        </motion.div>
-
+</motion.div>
       </div>
     </section>
   )
