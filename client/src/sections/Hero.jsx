@@ -1,9 +1,9 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import profile from '../assets/profile-fahmi.png' // ✅ FIX IMPORT
+
+import profile from '../assets/profile-fahmi.png'
 import linkedin from '../assets/linkedin.svg'
 import github from '../assets/github.svg'
-/* From uiverse.io by @FrM-bot */
 
 const Hero = () => {
   const roles = [
@@ -23,150 +23,268 @@ const Hero = () => {
   }, [])
 
   return (
-    <section className="min-h-screen flex items-center px-6 pt-25 w-full bg-[#362EED]/80 ">
-      <div className="w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <section className="min-h-screen w-full bg-[#362EED]/80 px-6 pt-50 pb-20 flex items-center">
+      
+      <div className="w-full max-w-7xl mx-auto">
 
-        {/* LEFT */}
-        <div className="text-center md:text-left">
+        {/* HERO GRID */}
+        <div className="grid md:grid-cols-2 gap-16 items-center">
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-sky-400 font-medium mb-4"
-          >
-            Hello, I'm Fahmi
-          </motion.p>
+          {/* LEFT */}
+          <div className="text-center md:text-left">
 
-          {/* 🔥 DYNAMIC TITLE */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-5xl md:text-7xl font-bold leading-tight text-white h-[80px] md:h-[120px]"
-          >
-            <AnimatePresence mode="wait">
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.5 }}
-                className="block"
+            {/* HELLO */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-sky-400 font-medium mb-4"
+            >
+              Hello, I'm Fahmi
+            </motion.p>
+
+            {/* DYNAMIC TITLE */}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-5xl md:text-7xl font-bold leading-tight text-white h-[80px] md:h-[120px]"
+            >
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}
+                  transition={{ duration: 0.5 }}
+                  className="block"
+                >
+                  {roles[index]}
+                </motion.span>
+              </AnimatePresence>
+            </motion.h1>
+
+            {/* DESCRIPTION */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="text-slate-300 mt-6 max-w-xl md:mx-0 mx-auto text-lg"
+            >
+              I build responsive, scalable, and modern web applications using
+              React, Node.js, and clean architecture.
+            </motion.p>
+
+            {/* SOCIAL ICONS */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mt-10 flex justify-center md:justify-start gap-8"
+            >
+
+              {/* LINKEDIN */}
+              <a
+                href="https://www.linkedin.com/in/mochamad-fahmi-fadillah/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  w-[70px] h-[70px]
+                  bg-white
+                  rounded-full
+                  flex items-center justify-center
+                  shadow-[0_0_20px_rgba(0,0,0,0.5)]
+                  transition-all duration-500
+                  hover:scale-[1.3]
+                  hover:-rotate-[360deg]
+                  hover:-translate-y-3
+                "
+                style={{ animation: 'sway 2s infinite alternate' }}
               >
-                {roles[index]}
-              </motion.span>
-            </AnimatePresence>
-          </motion.h1>
+                <img
+                  src={linkedin}
+                  alt="LinkedIn"
+                  className="w-8 h-8 transition-all duration-500 hover:scale-125"
+                />
+              </a>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="text-slate-400 mt-6 max-w-xl md:mx-0 mx-auto text-lg"
+              {/* GITHUB */}
+              <a
+                href="https://github.com/mochamadfahmifadillah/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  w-[70px] h-[70px]
+                  bg-white
+                  rounded-full
+                  flex items-center justify-center
+                  shadow-[0_0_20px_rgba(0,0,0,0.5)]
+                  transition-all duration-500
+                  hover:scale-[1.3]
+                  hover:-rotate-[360deg]
+                  hover:-translate-y-3
+                "
+                style={{ animation: 'sway 2s infinite alternate' }}
+              >
+                <img
+                  src={github}
+                  alt="GitHub"
+                  className="w-8 h-8 transition-all duration-500 hover:scale-125"
+                />
+              </a>
+
+            </motion.div>
+
+          </div>
+
+          {/* RIGHT IMAGE CARD */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center md:justify-end"
           >
-            I build responsive, scalable, and modern web applications using React,
-            Node.js, and clean architecture.
-          </motion.p>
+            <div
+              className="
+                w-[260px] md:w-[340px]
+                relative
+                rounded-[0.5rem_2rem]
+                shadow-[0_15px_30px_-5px_rgba(0,0,0,0.6)]
+                transition-all duration-300
+                hover:scale-[1.05]
+              "
+            >
 
-         <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  className="mt-10 flex justify-center md:justify-start gap-8"
->
+              {/* IMAGE */}
+              <div className="h-[340px] md:h-[430px] overflow-hidden rounded-[0.5rem_2rem]">
+                <img
+                  src={profile}
+                  alt="Fahmi"
+                  className="w-full h-full object-cover transition-all duration-300 hover:scale-125"
+                />
+              </div>
 
-  {/* LINKEDIN */}
-  <a
-    href="https://www.linkedin.com/in/mochamad-fahmi-fadillah/"
-    target="_blank"
-    className="
-      w-[70px] h-[70px]
-      bg-white
-      rounded-full
-      flex items-center justify-center
-      shadow-[0_0_20px_rgba(0,0,0,0.5)]
-      transition-all duration-500
-      hover:scale-[1.3] hover:-rotate-[360deg] hover:-translate-y-3
-    "
-    style={{ animation: "sway 2s infinite alternate" }}
-  >
-    <img
-      src={linkedin}
-      alt="LinkedIn"
-      className="w-8 h-8 transition-all duration-500 hover:scale-125"
-    />
-  </a>
+              {/* NAME */}
+              <div
+                className="
+                  absolute bottom-3 left-3
+                  w-[92%]
+                  px-4 py-2
+                  text-left
+                  backdrop-blur-[3px]
+                  bg-black/20
+                  rounded-[0.5rem_2rem]
+                  transition-all duration-500
+                  hover:translate-x-2
+                  hover:rotate-[3deg]
+                "
+              >
+                <h3 className="text-white text-sm font-semibold">
+                  Mochamad Fahmi Fadillah
+                </h3>
+              </div>
 
-  {/* GITHUB */}
-  <a
-    href="https://github.com/mochamadfahmifadillah/"
-    target="_blank"
-    className="
-      w-[70px] h-[70px]
-      bg-white
-      rounded-full
-      flex items-center justify-center
-      shadow-[0_0_20px_rgba(0,0,0,0.5)]
-      transition-all duration-500
-      hover:scale-[1.3] hover:-rotate-[360deg] hover:-translate-y-3
-    "
-    style={{ animation: "sway 2s infinite alternate" }}
-  >
-    <img
-      src={github}
-      alt="GitHub"
-      className="w-8 h-8 transition-all duration-500 hover:scale-125"
-    />
-  </a>
-
-</motion.div>
+            </div>
+          </motion.div>
 
         </div>
 
-        {/* RIGHT CARD */}
+        {/* STATS SECTION */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="flex justify-center md:justify-end"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="
+            mt-30
+            grid grid-cols-2 md:grid-cols-4
+            gap-6
+          "
         >
-          <div className="
-            w-[260px] md:w-[340px]
-            relative
-            rounded-[0.5rem_2rem]
-            shadow-[0_15px_30px_-5px_rgba(0,0,0,0.6)]
-            transition-all duration-300
-            hover:scale-[1.05]
-          ">
 
-            {/* IMAGE */}
-            <div className="h-[340px] md:h-[430px] overflow-hidden rounded-[0.5rem_2rem]">
-              <img
-                src={profile}
-                alt="Fahmi"
-                className="w-full h-full object-cover transition-all duration-300 hover:scale-125"
-              />
-            </div>
-
-            {/* DESCRIPTION */}
-            <div className="
-              absolute bottom-3 left-3
-              w-[92%]
-              px-4 py-2
-              text-left
-              backdrop-blur-[3px]
-              bg-black/20
-              rounded-[0.5rem_2rem]
+          {/* CARD 1 */}
+          <div
+            className="
+              bg-white/90
+              backdrop-blur-md
+              rounded-2xl
+              h-44
+              flex flex-col
+              justify-center
+              items-center
+              text-neutral-700
+              shadow-xl
               transition-all duration-500
-              hover:translate-x-2 hover:rotate-[3deg]
-            ">
-              <h3 className="text-white text-sm font-semibold">
-                Mochamad Fahmi Fadillah
-              </h3>
-            </div>
-
+              hover:-translate-y-3
+              hover:shadow-2xl
+            "
+          >
+            <span className="text-5xl font-bold">34+</span>
+            <p className="mt-2 font-semibold">Projects</p>
           </div>
+
+          {/* CARD 2 */}
+          <div
+            className="
+              bg-white/90
+              backdrop-blur-md
+              rounded-2xl
+              h-44
+              flex flex-col
+              justify-center
+              items-center
+              text-neutral-700
+              shadow-xl
+              transition-all duration-500
+              hover:-translate-y-3
+              hover:shadow-2xl
+            "
+          >
+            <span className="text-5xl font-bold">2+</span>
+            <p className="mt-2 font-semibold">Years Experience</p>
+          </div>
+
+          {/* CARD 3 */}
+          <div
+            className="
+              bg-white/90
+              backdrop-blur-md
+              rounded-2xl
+              h-44
+              flex flex-col
+              justify-center
+              items-center
+              text-neutral-700
+              shadow-xl
+              transition-all duration-500
+              hover:-translate-y-3
+              hover:shadow-2xl
+            "
+          >
+            <span className="text-5xl font-bold">20+</span>
+            <p className="mt-2 font-semibold">Happy Clients</p>
+          </div>
+
+          {/* CARD 4 */}
+          <div
+            className="
+              bg-white/90
+              backdrop-blur-md
+              rounded-2xl
+              h-44
+              flex flex-col
+              justify-center
+              items-center
+              text-neutral-700
+              shadow-xl
+              transition-all duration-500
+              hover:-translate-y-3
+              hover:shadow-2xl
+            "
+          >
+            <span className="text-5xl font-bold">100%</span>
+            <p className="mt-2 font-semibold">Commitment</p>
+          </div>
+
         </motion.div>
 
       </div>
