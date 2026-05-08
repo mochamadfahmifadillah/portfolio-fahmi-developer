@@ -24,15 +24,15 @@ const certificates = [
     id: 4,
     title: 'Menjadi React Web Developer Expert',
     issuer: 'Dicoding Indonesia',
-    image: '/git-github.png',
-    link: '#',
+    image: '/expert-react.png',
+    link: 'https://www.dicoding.com/dicodingassets/coursecertificate/50941f0e3af4f895cd5ff266eda160594b4bf37e/view',
   },
   {
     id: 5,
-    title: 'Sertifikat Kelulusan Program Dicoding Asah X Accenture',
+    title: 'Lulus Program Dicoding Asah X Accenture',
     issuer: 'Dicoding Indonesia',
-    image: '/javascript-basic.png',
-    link: '#',
+    image: '/dicoding-Asah.png',
+    link: '',
   },
 ]
 
