@@ -52,11 +52,15 @@ const Hero = () => {
 
             {/* DYNAMIC TITLE */}
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-5xl md:text-7xl font-bold leading-tight text-white h-[80px] md:h-[120px]"
-            >
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  className="text-5xl md:text-7xl font-bold leading-tight text-white h-[80px] md:h-[120px]"
+  style={{
+    WebkitTextStroke: '0.1px black',
+    textShadow: '4px 4px 0px rgba(0,0,0,2)',
+  }}
+>
               <AnimatePresence mode="wait">
                 <motion.span
                   key={index}

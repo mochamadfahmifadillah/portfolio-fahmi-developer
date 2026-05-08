@@ -5,7 +5,7 @@ const Navbar = () => {
 
         {/* LOGO */}
         <h1 className="font-bold text-xl text-white">
-          Portfolio Fahmi
+          Personal Portfolio
         </h1>
 
         {/* RIGHT SIDE (MENU + SWITCH) */}
