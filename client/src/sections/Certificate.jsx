@@ -4,7 +4,7 @@ const certificates = [
     title: 'Belajar Fundamental Front-End Web Development',
     issuer: 'Dicoding Indonesia',
     image: '/fundamental-front-end.png',
-    link: '#',
+    link: 'https://www.dicoding.com/dicodingassets/coursecertificate/324a8081369090c9e920c6fefa787c65b0fad6be/view',
   },
   {
     id: 2,
@@ -18,6 +18,20 @@ const certificates = [
     title: 'Belajar Fundamental Back-End dengan JavaScript',
     issuer: 'Dicoding Indonesia',
     image: '/fundamental-backend.png',
+    link: '#',
+  },
+  {
+    id: 4,
+    title: 'Menjadi React Web Developer Expert',
+    issuer: 'Dicoding Indonesia',
+    image: '/git-github.png',
+    link: '#',
+  },
+  {
+    id: 5,
+    title: 'Sertifikat Kelulusan Program Dicoding Asah X Accenture',
+    issuer: 'Dicoding Indonesia',
+    image: '/javascript-basic.png',
     link: '#',
   },
 ]
@@ -53,7 +67,7 @@ const Certificates = () => {
             grid
             grid-cols-1
             md:grid-cols-2
-            lg:grid-cols-3
+            lg:grid-cols-6
 
             gap-10
 
@@ -79,12 +93,14 @@ const Certificates = () => {
 const CertificateCard = ({ cert }) => {
   return (
     <div
-      className="
+      className={`
         group
         relative
 
         w-full
         max-w-[480px]
+
+        lg:col-span-2
 
         rounded-[30px]
         overflow-hidden
@@ -100,7 +116,10 @@ const CertificateCard = ({ cert }) => {
 
         hover:-translate-y-4
         hover:shadow-[0_0_50px_rgba(54,46,237,0.45)]
-      "
+
+        ${cert.id === 4 ? 'lg:col-start-2' : ''}
+        ${cert.id === 5 ? 'lg:col-start-4' : ''}
+      `}
     >
 
       {/* IMAGE */}
