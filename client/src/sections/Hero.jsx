@@ -30,7 +30,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <section className="min-h-screen w-full bg-[#362EED]/80 px-6 pt-50 pb-20 flex items-center">
+    <section className="w-full bg-[#362EED]/80 px-6 pt-55 pb-20 flex">
       
       <div className="w-full max-w-7xl mx-auto">
 

@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className="min-h-screen flex items-center px-6 bg-[#362EED]/80 ">
+    <section className="px-10 py-6 bg-[#362EED]/80 ">
       <div className="max-w-3xl mx-auto">
         
         <div>
