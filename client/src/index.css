@@ -217,57 +217,100 @@ code {
   );
 }
 
-/* The switch - the box around the slider */
-.switch {
-  font-size: 17px;
-  position: relative;
-  display: inline-block;
-  width: 3.5em;
-  height: 2em;
+/* Navbar */
+.navigation-card {
+  width: 650px;
+  max-width: 75%;
+
+  height: 85px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  gap: 20px;
+
+  background: #e4e4e4;
+
+  padding: 14px 24px;
+
+  border-radius: 999px;
+
+  margin: 0 auto;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+.tab {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
-  transition: .4s;
-  border-radius: 5px;
+.tab svg {
+  font-size: 24px;
+  transition: all 0.3s ease;
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 1.4em;
-  width: 0.1em;
-  border-radius: 0px;
-  left: 0.3em;
-  bottom: 0.3em;
-  background-color: white;
-  transition: .4s;
+/* HOVER */
+.tab:hover {
+  transform: translateY(-5px) scale(1.05);
 }
 
-input:checked + .slider {
-  background-color: #171717;
-  box-shadow: inset 2px 5px 10px rgb(0, 0, 0);
+.tab:hover svg {
+  color: white;
 }
 
-input:checked + .slider:before {
-  transform: translateX(2.8em) rotate(360deg);
+/* ICON COLORS */
+.about-tab svg {
+  color: #3035cb;
 }
 
+.projects-tab svg {
+  color: #333;
+}
+
+.certificates-tab svg {
+  color: #444;
+}
+
+.contact-tab svg {
+  color: #b82323;
+}
+
+/* BACKGROUND HOVER */
+.about-tab:hover {
+  background: #3035cb;
+}
+
+.projects-tab:hover {
+  background: #333;
+}
+
+.certificates-tab:hover {
+  background: #444;
+}
+
+.contact-tab:hover {
+  background: #b82323;
+}
+
+/* Project Card */
 .card {
   --font-color: #ffffff;
   --bg-color: rgba(15, 23, 42, 0.85);
