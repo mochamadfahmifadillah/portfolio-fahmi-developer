@@ -20,9 +20,34 @@
   <meta property="og:title" content="Mochamad Fahmi Fadillah | Full Stack Developer Portfolio" />
   <meta property="og:description" content="Frontend & Full Stack Developer (React, Next.js, Node.js)" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mochamad-fahmi-fadillah.vercel.app/" />
 
-  <!-- 🔥 CANONICAL (IMPORTANT FOR INDEX CONSISTENCY) -->
-  <link rel="canonical" href="https://your-domain.com/" />
+  <!-- 🔥 CANONICAL (FIXED: Mengarah ke domain Vercel yang aktif) -->
+  <link rel="canonical" href="https://mochamad-fahmi-fadillah.vercel.app/" />
+
+  <!-- 🔥 SCHEMA ORG (KTP DIGITAL UNTUK GOOGLE) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mochamad Fahmi Fadillah",
+    "url": "https://mochamad-fahmi-fadillah.vercel.app/",
+    "sameAs": [
+      "https://www.linkedin.com/in/mochamad-fahmi-fadillah",
+      "https://github.com/mfahmidv",
+      "https://www.facebook.com/mochamad.fahmi.fadillah"
+    ],
+    "jobTitle": "Frontend&Fullstack Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Universitas Komputer Indonesia"
+    }
+  }
+  </script>
 
   <!-- 🔥 FAVICON -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -30,10 +55,18 @@
 
 <body>
 
-  <!-- 🔥 SEO FALLBACK (React SPA SUPPORT) -->
+  <!-- 🔥 SEO FALLBACK (React SPA SUPPORT + BACKLINKS) -->
   <noscript>
-    <h1>Mochamad Fahmi Fadillah</h1>
-    <p>Frontend Developer | Full Stack Developer | Information Systems Student at Universitas Komputer Indonesia</p>
+    <div style="padding: 20px; text-align: center;">
+      <h1>Mochamad Fahmi Fadillah</h1>
+      <p>Frontend Developer | Full Stack Developer | Information Systems Student at Universitas Komputer Indonesia</p>
+      <p>Spesialisasi: React, Next.js, dan Node.js</p>
+      <hr>
+      <p>Temukan saya di: 
+        <a href="https://www.linkedin.com/in/mochamad-fahmi-fadillah">LinkedIn</a> | 
+        <a href="https://github.com/mfahmidv">GitHub</a>
+      </p>
+    </div>
   </noscript>
 
   <!-- REACT ROOT -->
