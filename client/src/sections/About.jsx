@@ -3,14 +3,19 @@ const About = () => {
     <section className="px-10 py-6 bg-[#362EED]/80 ">
       <div className="max-w-3xl mx-auto">
         
-        <div>
-          <p className="text-sky-400 font-medium mb-4 text-lg">
-            About Me
-          </p>
-
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            Frontend Developer & Full Stack Developer
-          </h2>
+       <div className="text-center">
+  <p
+    className="
+      text-white
+      text-4xl md:text-5xl
+      font-bold
+      tracking-wide
+      mb-6
+      drop-shadow-[0_0_12px_rgba(255,255,255,0.3)]
+    "
+  >
+    About Me
+  </p>
 
           <div className="space-y-4 text-slate-400 text-lg leading-relaxed text-justify">
             <p>

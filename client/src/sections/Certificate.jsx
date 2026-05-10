@@ -40,26 +40,33 @@ const Certificates = () => {
   return (
     <section className="py-32 px-6 bg-[#362EED]/80">
 
-      {/* CONTAINER */}
-      <div className="max-w-[1700px] mx-auto">
+  {/* CONTAINER */}
+<div className="max-w-[1700px] mx-auto flex flex-col items-center">
 
-        {/* HEADER */}
-        <div className="text-center mb-24">
+  {/* HEADER */}
+  <div className="text-center mb-24">
 
-          <p className="text-sky-300 font-medium mb-4 tracking-wide">
-            Certificates
-          </p>
+    <p className="text-sky-300 font-medium mb-4 tracking-wide">
+      Certificates
+    </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
-            My Certifications
-          </h2>
+   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+  My Certifications
+</h2>
 
-          <p className="text-slate-200 mt-5 max-w-2xl mx-auto leading-relaxed">
-            Some professional certifications and learning achievements
-            that represent my development journey in web technologies.
-          </p>
+    <p
+      className="
+        text-white
+        mt-5
+        max-w-2xl
+        leading-relaxed
+      "
+    >
+      Some professional certifications and learning achievements
+      that represent my development journey in web technologies.
+    </p>
 
-        </div>
+  </div>
 
         {/* GRID */}
         <div

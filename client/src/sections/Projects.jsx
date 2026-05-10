@@ -6,7 +6,7 @@ const projects = [
     title: 'Kirava Logistics',
     description:
       'Logistics management website focused on shipment tracking, responsive UI, and business workflow optimization.',
-    image: '/images/kirava-logistics.png',
+    image: '/Kirava-LandingPage.png',
     stack: ['React', 'Tailwind CSS', 'API'],
     github: '#',
     demo: '#',
