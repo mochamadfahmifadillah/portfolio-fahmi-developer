@@ -56,7 +56,7 @@ const SkillCard = ({ skill }) => {
         group relative overflow-hidden
         flex justify-center items-center
         h-56 w-72
-        bg-neutral-900
+        bg-[#000]/80
         rounded-2xl
         outline outline-slate-400 -outline-offset-8
         origin-bottom-right
