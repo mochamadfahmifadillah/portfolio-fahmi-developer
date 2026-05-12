@@ -1,40 +1,181 @@
 const About = () => {
   return (
-    <section className="px-10 py-6 bg-[#362EED]/80 ">
-      <div className="max-w-3xl mx-auto">
-        
-       <div className="text-center">
-  <p
-    className="
-      text-white
-      text-4xl md:text-5xl
-      font-bold
-      tracking-wide
-      mb-6
-      drop-shadow-[0_0_12px_rgba(255,255,255,0.3)]
-    "
-  >
-    About Me
-  </p>
+    <section className="px-6 md:px-10 py-28 bg-[#362EED]/80 overflow-hidden">
+      <div className="max-w-5xl mx-auto">
 
-          <div className="space-y-4 text-slate-400 text-lg leading-relaxed text-justify">
-            <p>
-              An Information Systems student at Universitas Komputer Indonesia, currently transitioning from logistics operations into Full Stack Web Development.
+        {/* TITLE */}
+        <div
+          className="
+            text-center
+            mb-16
+
+            opacity-0
+            animate-[fadeUp_1s_ease_forwards]
+          "
+        >
+
+          <h2
+            className="
+              text-5xl md:text-6xl
+              font-extrabold
+
+              text-transparent
+              bg-clip-text
+
+              bg-gradient-to-r
+              from-white
+              via-sky-300
+              to-purple-300
+
+              animate-gradient
+
+              tracking-wide
+
+              drop-shadow-[0_0_25px_rgba(255,255,255,0.25)]
+            "
+          >
+            About Me
+          </h2>
+
+          <div
+            className="
+              w-32 h-1.5
+              bg-white/70
+
+              mx-auto
+              mt-7
+
+              rounded-full
+
+              shadow-[0_0_20px_rgba(255,255,255,0.5)]
+            "
+          />
+
+        </div>
+
+        {/* CONTENT CARD */}
+        <div
+          className="
+            relative
+
+            bg-white/10
+            backdrop-blur-xl
+
+            border border-white/10
+
+            rounded-[32px]
+
+            p-8 md:p-14
+
+            overflow-hidden
+
+            shadow-[0_0_45px_rgba(0,0,0,0.25)]
+
+            opacity-0
+            animate-[fadeUp_1.2s_ease_forwards]
+          "
+        >
+
+          {/* GLOW EFFECT */}
+          <div
+            className="
+              absolute
+              w-72 h-72
+
+              bg-sky-400/20
+              blur-3xl
+              rounded-full
+
+              -top-24
+              -left-20
+            "
+          />
+
+          <div
+            className="
+              absolute
+              w-72 h-72
+
+              bg-purple-500/20
+              blur-3xl
+              rounded-full
+
+              -bottom-24
+              -right-20
+            "
+          />
+
+          {/* CONTENT */}
+          <div
+            className="
+              relative
+              z-10
+
+              space-y-8
+
+              text-slate-100
+              text-lg md:text-xl
+
+              leading-[2.2]
+
+              tracking-wide
+
+              text-center
+              md:text-left
+            "
+          >
+
+            <p
+              className="
+                transition-all duration-300
+                hover:translate-x-2
+                hover:text-white
+              "
+            >
+              An Information Systems student at Universitas Komputer Indonesia,
+              currently transitioning from logistics operations into Full Stack
+              Web Development.
             </p>
 
-            <p>
-              I am a graduate of the Dicoding Asah x Accenture program (2025), where I gained hands-on experience through project-based learning and real-world development workflows aligned with industry standards.
+            <p
+              className="
+                transition-all duration-300
+                hover:translate-x-2
+                hover:text-white
+              "
+            >
+              I am a graduate of the Dicoding Asah x Accenture program (2025),
+              where I gained hands-on experience through project-based learning
+              and real-world development workflows aligned with industry
+              standards.
             </p>
 
-            <p>
-              I focus on building modern and scalable web applications using technologies such as React, Next.js, and Node.js, while implementing REST API integration and clean architecture principles.
+            <p
+              className="
+                transition-all duration-300
+                hover:translate-x-2
+                hover:text-white
+              "
+            >
+              I focus on building modern and scalable web applications using
+              technologies such as React, Next.js, and Node.js while
+              implementing REST API integration and clean architecture
+              principles.
             </p>
 
-            <p>
-              I enjoy crafting responsive user interfaces, solving backend challenges, and creating efficient, user-focused digital experiences.
+            <p
+              className="
+                transition-all duration-300
+                hover:translate-x-2
+                hover:text-white
+              "
+            >
+              I enjoy crafting responsive user interfaces, solving backend
+              challenges, and creating efficient, user-focused digital
+              experiences.
             </p>
+
           </div>
-
         </div>
 
       </div>
