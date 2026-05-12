@@ -23,75 +23,152 @@ const skills = [
 const Skills = () => {
   return (
     <section className="py-32 px-6 bg-[#362EED]/80">
+
       <div className="max-w-6xl mx-auto">
 
         {/* HEADER */}
         <div className="text-center mb-16">
-          <p className="text-sky-400 font-medium mb-4">
+
+          <p className="text-sky-300 font-medium mb-4">
             Tech Stack
           </p>
 
-          <h2 className="text-4xl font-bold text-white">
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
             Technologies I Work With
           </h2>
+
         </div>
 
         {/* GRID */}
-        <div className="grid md:grid-cols-3 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+
           {skills.map((skill) => (
-            <SkillCard key={skill.name} skill={skill} />
+            <SkillCard
+              key={skill.name}
+              skill={skill}
+            />
           ))}
+
         </div>
 
       </div>
+
     </section>
   )
 }
 
 const SkillCard = ({ skill }) => {
   return (
-    <div className="bg-sky-700 rounded-2xl shadow-sm shadow-sky-500">
+    <div
+      className="
+        group
+        relative
+        overflow-hidden
 
-      <div className="
-        group relative overflow-hidden
         flex justify-center items-center
-        h-56 w-72
-        bg-[#000]/80
-        rounded-2xl
-        outline outline-slate-400 -outline-offset-8
-        origin-bottom-right
+
+        h-56
+        w-72
+
+        rounded-3xl
+
+        bg-gradient-to-br
+        from-[#362EED]
+        via-[#4f46e5]
+        to-[#1e1b4b]
+
+        shadow-[0_0_30px_rgba(54,46,237,0.35)]
+
         transition-all duration-500
-        hover:rotate-12
 
-        before:absolute before:w-12 before:h-12 before:bg-sky-400
-        before:rounded-full before:blur-xl
-        before:top-20 before:right-16
+        hover:shadow-[0_0_50px_rgba(56,189,248,0.45)]
+      "
+    >
 
-        after:absolute after:w-12 after:h-12 after:bg-sky-700
-        after:rounded-full after:blur-xl
-        after:bottom-32 after:right-16
+      {/* GLOW TOP */}
+      <div
+        className="
+          absolute
+          top-[-30px]
+          left-[-30px]
 
-        hover:before:translate-y-12 hover:before:-translate-x-32
-        hover:after:translate-x-24
-      ">
+          w-36
+          h-36
 
-        <div className="z-10 flex flex-col items-center gap-3">
+          rounded-full
+          bg-sky-400/20
+          blur-3xl
+        "
+      />
 
-          {/* LOGO */}
-          <img
-            src={skill.image}
-            alt={skill.name}
-            className="w-16 h-16 object-contain transition duration-500 group-hover:scale-125 group-hover:drop-shadow-[0_0_10px_rgba(56,189,248,0.8)]"
-          />
+      {/* GLOW BOTTOM */}
+      <div
+        className="
+          absolute
+          bottom-[-30px]
+          right-[-30px]
 
-          {/* NAME */}
-          <p className="text-gray-50 text-sm">
-            {skill.name}
-          </p>
+          w-36
+          h-36
 
-        </div>
+          rounded-full
+          bg-purple-500/20
+          blur-3xl
+        "
+      />
+
+      {/* GRID EFFECT */}
+      <div
+        className="
+          absolute inset-0
+          opacity-10
+
+          bg-[linear-gradient(rgba(255,255,255,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.15)_1px,transparent_1px)]
+
+          bg-[size:24px_24px]
+        "
+      />
+
+      {/* CONTENT */}
+      <div className="relative z-10 flex flex-col items-center gap-5">
+
+        {/* LOGO */}
+        <img
+          src={skill.image}
+          alt={skill.name}
+          className="
+            w-20
+            h-20
+
+            object-contain
+
+            transition-all duration-700
+
+            group-hover:scale-150
+            group-hover:rotate-[360deg]
+
+            group-hover:drop-shadow-[0_0_25px_rgba(56,189,248,0.9)]
+          "
+        />
+
+        {/* TEXT */}
+        <p
+          className="
+            text-white
+            text-lg
+            font-semibold
+            tracking-wide
+
+            transition-all duration-300
+
+            group-hover:text-sky-300
+          "
+        >
+          {skill.name}
+        </p>
 
       </div>
+
     </div>
   )
 }

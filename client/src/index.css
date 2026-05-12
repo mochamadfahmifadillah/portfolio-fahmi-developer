@@ -215,76 +215,34 @@ code {
 .navigation-card {
   width: 650px;
   max-width: 75%;
-
   height: 85px;
-
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-
   gap: 20px;
-
-  background: #e4e4e4;
-
   padding: 14px 24px;
-
   border-radius: 999px;
-
   margin: 0 auto;
-
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .tab {
   width: 65px;
   height: 65px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
-  background: #ffffff;
-
   text-decoration: none;
-
   transition: all 0.3s ease;
-
+  background-color: #fff;
   box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.08);
+    0 2px 8px rgba(0, 0, 0, 5);
 }
 
 .tab svg {
   font-size: 24px;
   transition: all 0.3s ease;
-}
-
-/* HOVER */
-.tab:hover {
-  transform: translateY(-5px) scale(1.05);
-}
-
-.tab:hover svg {
-  color: white;
-}
-
-/* ICON COLORS */
-.about-tab svg {
-  color: #3035cb;
-}
-
-.projects-tab svg {
-  color: #333;
-}
-
-.certificates-tab svg {
-  color: #444;
-}
-
-.contact-tab svg {
-  color: #b82323;
+  color: #362EED;
 }
 
 /* BACKGROUND HOVER */
