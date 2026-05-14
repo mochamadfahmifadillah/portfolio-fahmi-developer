@@ -1,3 +1,4 @@
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import ProjectCard from '../components/ProjectCard'
 
 const projects = [
@@ -225,9 +226,11 @@ const Projects = () => {
 
                   <a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="
                       flex-1
-                      text-center
+                      flex items-center justify-center gap-2
 
                       py-3
 
@@ -245,14 +248,17 @@ const Projects = () => {
                       hover:text-black
                     "
                   >
+                    <FaGithub size={18} />
                     GitHub
                   </a>
 
                   <a
                     href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="
                       flex-1
-                      text-center
+                      flex items-center justify-center gap-2
 
                       py-3
 
@@ -271,6 +277,7 @@ const Projects = () => {
                       hover:shadow-[0_0_25px_rgba(56,189,248,0.5)]
                     "
                   >
+                    <FaExternalLinkAlt size={16} />
                     Live Demo
                   </a>
 
