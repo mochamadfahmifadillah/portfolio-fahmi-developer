@@ -11,14 +11,14 @@ const certificates = [
     title: 'Belajar Fundamental Aplikasi Web dengan React',
     issuer: 'Dicoding Indonesia',
     image: '/fundamental-react.png',
-    link: '#',
+    link: 'https://www.dicoding.com/dicodingassets/coursecertificate/5304c6faa81c59d78d07caa32e8a158bdb253d53/view',
   },
   {
     id: 3,
     title: 'Belajar Fundamental Back-End dengan JavaScript',
     issuer: 'Dicoding Indonesia',
     image: '/fundamental-backend.png',
-    link: '#',
+    link: 'https://www.dicoding.com/dicodingassets/coursecertificate/55243985356be883881414923d9524bf00644800/view',
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const certificates = [
     title: 'Lulus Program Dicoding Asah X Accenture',
     issuer: 'Dicoding Indonesia',
     image: '/dicoding-Asah.png',
-    link: '',
+    link: 'https://drive.google.com/file/d/1DD6t3mHREH8VETFNhsa7IlsDd7RJNZD1/view?usp=sharing',
   },
 ]
 
