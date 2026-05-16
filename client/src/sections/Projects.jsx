@@ -1,5 +1,4 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
-import ProjectCard from '../components/ProjectCard'
 
 const projects = [
   {
@@ -30,7 +29,7 @@ const Projects = () => {
 
       <div className="max-w-7xl mx-auto">
 
-        {/* TITLE */}
+        {/* HEADER */}
         <div
           className="
             text-center
@@ -41,44 +40,40 @@ const Projects = () => {
           "
         >
 
+          <p className="text-sky-300 font-medium mb-4 tracking-wide">
+            Portfolio
+          </p>
+
           <h2
             className="
-              text-5xl md:text-6xl
+              text-4xl md:text-5xl
               font-extrabold
 
-              text-transparent
-              bg-clip-text
+              text-white
 
-              bg-gradient-to-r
-              from-white
-              via-sky-300
-              to-purple-300
-
-              animate-gradient
-
-              drop-shadow-[0_0_20px_rgba(255,255,255,0.25)]
+              drop-shadow-[0_0_18px_rgba(255,255,255,0.25)]
             "
           >
-            Projects
+            Featured Projects
           </h2>
 
           <div
             className="
-              w-32 h-1.5
+              w-28 h-1
               bg-white/70
 
               mx-auto
-              mt-7
+              mt-6
 
               rounded-full
 
-              shadow-[0_0_20px_rgba(255,255,255,0.5)]
+              shadow-[0_0_20px_rgba(255,255,255,0.35)]
             "
           />
 
         </div>
 
-        {/* PROJECT GRID */}
+        {/* GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 place-items-center">
 
           {projects.map((project, index) => (
@@ -87,25 +82,26 @@ const Projects = () => {
               className="
                 group
                 relative
+                overflow-hidden
 
                 w-full
                 max-w-[520px]
 
-                rounded-[30px]
+                rounded-[32px]
 
-                overflow-hidden
-
-                bg-white/10
-                backdrop-blur-xl
+                bg-gradient-to-br
+                from-[#362EED]
+                via-[#4f46e5]
+                to-[#1e1b4b]
 
                 border border-white/10
 
-                shadow-[0_0_35px_rgba(0,0,0,0.25)]
+                shadow-[0_0_35px_rgba(54,46,237,0.35)]
 
                 transition-all duration-500
 
-                hover:-translate-y-4
-                hover:shadow-[0_0_50px_rgba(255,255,255,0.2)]
+                hover:-translate-y-3
+                hover:shadow-[0_0_55px_rgba(56,189,248,0.35)]
 
                 opacity-0
                 animate-[fadeUp_1s_ease_forwards]
@@ -115,41 +111,57 @@ const Projects = () => {
               }}
             >
 
-              {/* GLOW EFFECT */}
+              {/* TOP GLOW */}
               <div
                 className="
                   absolute
-                  w-60 h-60
+                  top-[-40px]
+                  left-[-40px]
 
+                  w-40
+                  h-40
+
+                  rounded-full
                   bg-sky-400/20
                   blur-3xl
-                  rounded-full
-
-                  -top-20
-                  -left-16
                 "
               />
 
+              {/* BOTTOM GLOW */}
               <div
                 className="
                   absolute
-                  w-60 h-60
+                  bottom-[-40px]
+                  right-[-40px]
 
+                  w-40
+                  h-40
+
+                  rounded-full
                   bg-purple-500/20
                   blur-3xl
-                  rounded-full
+                "
+              />
 
-                  -bottom-20
-                  -right-16
+              {/* GRID EFFECT */}
+              <div
+                className="
+                  absolute inset-0
+                  opacity-10
+
+                  bg-[linear-gradient(rgba(255,255,255,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.15)_1px,transparent_1px)]
+
+                  bg-[size:24px_24px]
                 "
               />
 
               {/* IMAGE */}
-              <div className="overflow-hidden">
+              <div className="relative overflow-hidden rounded-t-[32px]">
 
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
                   className="
                     w-full
                     h-[280px]
@@ -162,11 +174,23 @@ const Projects = () => {
                   "
                 />
 
+                {/* IMAGE OVERLAY */}
+                <div
+                  className="
+                    absolute inset-0
+
+                    bg-gradient-to-t
+                    from-black/50
+                    to-transparent
+                  "
+                />
+
               </div>
 
               {/* CONTENT */}
               <div className="relative z-10 p-8">
 
+                {/* TITLE */}
                 <h3
                   className="
                     text-3xl
@@ -174,17 +198,22 @@ const Projects = () => {
                     text-white
 
                     mb-4
+
+                    transition duration-300
+
+                    group-hover:text-sky-300
                   "
                 >
                   {project.title}
                 </h3>
 
+                {/* DESCRIPTION */}
                 <p
                   className="
                     text-slate-200
                     leading-relaxed
 
-                    mb-6
+                    mb-7
                   "
                 >
                   {project.description}
@@ -209,9 +238,10 @@ const Projects = () => {
 
                         backdrop-blur-md
 
-                        transition duration-300
+                        transition-all duration-300
 
-                        hover:bg-white/20
+                        hover:bg-sky-400/20
+                        hover:border-sky-300/30
                         hover:scale-105
                       "
                     >
@@ -224,6 +254,7 @@ const Projects = () => {
                 {/* BUTTONS */}
                 <div className="flex gap-4">
 
+                  {/* GITHUB */}
                   <a
                     href={project.github}
                     target="_blank"
@@ -232,7 +263,7 @@ const Projects = () => {
                       flex-1
                       flex items-center justify-center gap-2
 
-                      py-3
+                      py-3.5
 
                       rounded-2xl
 
@@ -245,13 +276,15 @@ const Projects = () => {
                       transition-all duration-300
 
                       hover:bg-white
-                      hover:text-black
+                      hover:text-[#1e1b4b]
+                      hover:scale-105
                     "
                   >
                     <FaGithub size={18} />
                     GitHub
                   </a>
 
+                  {/* DEMO */}
                   <a
                     href={project.demo}
                     target="_blank"
@@ -260,7 +293,7 @@ const Projects = () => {
                       flex-1
                       flex items-center justify-center gap-2
 
-                      py-3
+                      py-3.5
 
                       rounded-2xl
 
