@@ -39,60 +39,34 @@ const certificates = [
 const Certificates = () => {
   return (
     <section className="py-32 px-6 bg-[#362EED]/80">
+      <div className="max-w-[1700px] mx-auto flex flex-col items-center">
 
-  {/* CONTAINER */}
-<div className="max-w-[1700px] mx-auto flex flex-col items-center">
+        {/* HEADER */}
+        <div className="text-center mb-24">
+          <p className="text-sky-300 font-medium mb-4 tracking-wide">
+            Certificates
+          </p>
 
-  {/* HEADER */}
-  <div className="text-center mb-24">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            My Certifications
+          </h2>
 
-    <p className="text-sky-300 font-medium mb-4 tracking-wide">
-      Certificates
-    </p>
-
-   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-  My Certifications
-</h2>
-
-    <p
-      className="
-        text-white
-        mt-5
-        max-w-2xl
-        leading-relaxed
-      "
-    >
-      Some professional certifications and learning achievements
-      that represent my development journey in web technologies.
-    </p>
-
-  </div>
+          <p className="text-white mt-5 max-w-2xl leading-relaxed">
+            Some professional certifications and learning achievements
+            that represent my development journey in web technologies.
+          </p>
+        </div>
 
         {/* GRID */}
-        <div
-          className="
-            grid
-            grid-cols-1
-            md:grid-cols-2
-            lg:grid-cols-6
-
-            gap-10
-
-            justify-items-center
-          "
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 justify-items-center">
 
           {certificates.map((cert) => (
-            <CertificateCard
-              key={cert.id}
-              cert={cert}
-            />
+            <CertificateCard key={cert.id} cert={cert} />
           ))}
 
         </div>
 
       </div>
-
     </section>
   )
 }
@@ -101,28 +75,18 @@ const CertificateCard = ({ cert }) => {
   return (
     <div
       className={`
-        group
-        relative
-
-        w-full
-        max-w-[480px]
-
-        lg:col-span-2
-
-        rounded-[30px]
-        overflow-hidden
-
+        group relative w-full max-w-[480px] lg:col-span-2
+        rounded-[30px] overflow-hidden
         border border-white/10
 
         bg-slate-900/30
-        backdrop-blur-xl
+        backdrop-blur-md
 
-        shadow-[0_15px_40px_rgba(0,0,0,0.3)]
+        shadow-md
 
-        transition-all duration-500
+        transition-transform duration-300
 
-        hover:-translate-y-4
-        hover:shadow-[0_0_50px_rgba(54,46,237,0.45)]
+        hover:-translate-y-2
 
         ${cert.id === 4 ? 'lg:col-start-2' : ''}
         ${cert.id === 5 ? 'lg:col-start-4' : ''}
@@ -131,45 +95,29 @@ const CertificateCard = ({ cert }) => {
 
       {/* IMAGE */}
       <div className="h-[330px] overflow-hidden">
-
         <img
           src={cert.image}
           alt={cert.title}
+          loading="lazy"
+          decoding="async"
           className="
-            w-full
-            h-full
-            object-cover
-
-            transition-all duration-700
-
+            w-full h-full object-cover
+            transition-transform duration-500
             group-hover:scale-105
           "
         />
-
       </div>
 
       {/* OVERLAY */}
       <div
         className="
-          absolute inset-0
+          absolute inset-0 bg-black/70
+          opacity-0 group-hover:opacity-100
+          transition-opacity duration-300
 
-          bg-black/70
-
-          opacity-0
-          group-hover:opacity-100
-
-          transition-all duration-500
-
-          flex flex-col
-          items-center
-          justify-center
-
-          text-center
-
-          px-8
+          flex flex-col items-center justify-center text-center px-8
         "
       >
-
         <h3 className="text-white font-bold text-2xl leading-snug">
           {cert.title}
         </h3>
@@ -183,27 +131,15 @@ const CertificateCard = ({ cert }) => {
           target="_blank"
           rel="noreferrer"
           className="
-            mt-7
-
-            bg-[#362EED]
-            hover:bg-[#4b44ff]
-
-            px-6 py-3
-
-            rounded-2xl
-
-            text-sm
-            font-semibold
-            text-white
-
-            transition-all duration-300
-
+            mt-7 bg-[#362EED] hover:bg-[#4b44ff]
+            px-6 py-3 rounded-2xl
+            text-sm font-semibold text-white
+            transition-transform duration-200
             hover:scale-105
           "
         >
           View Certificate
         </a>
-
       </div>
 
     </div>
