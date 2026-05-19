@@ -8,7 +8,7 @@ const projects = [
       'Logistics management website focused on shipment tracking, responsive UI, and business workflow optimization.',
     image: '/Kirava-LandingPage.png',
     stack: ['React', 'Tailwind CSS', 'API'],
-    github: '#',
+    github: 'https://github.com/mochamadfahmifadillah',
     demo: '#',
   },
   {
@@ -18,7 +18,7 @@ const projects = [
       'Learning platform website designed for online education experience with responsive layout and interactive UI.',
     image: '/images/education-learning.png',
     stack: ['React', 'JavaScript', 'CSS'],
-    github: '#',
+    github: 'https://github.com/mochamadfahmifadillah',
     demo: '#',
   },
 ]
