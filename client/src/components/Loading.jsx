@@ -2,7 +2,8 @@ import '../styles/loading.css'
 
 const Loading = () => {
   return (
-    <div className="h-screen flex items-center justify-center bg-[#362EED]/80">
+    <div className="h-screen flex flex-col items-center justify-center gap-6 bg-[#362EED]/80">
+      
       <div className="wheel-and-hamster">
         <div className="wheel"></div>
 
@@ -23,6 +24,13 @@ const Loading = () => {
         </div>
 
         <div className="spoke"></div>
+      </div>
+
+      {/* Loading Text */}
+      <div className="text-center text-white">
+        <h2 className="text-2xl font-bold tracking-wide animate-pulse">
+          Loading...
+        </h2>
       </div>
     </div>
   )
