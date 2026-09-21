@@ -1,46 +1,52 @@
 const certificates = [
   {
     id: 1,
-    title: 'Belajar Fundamental Front-End Web Development',
-    issuer: 'Dicoding Indonesia',
-    image: '/fundamental-front-end.webp',
-    link: 'https://www.dicoding.com/dicodingassets/coursecertificate/324a8081369090c9e920c6fefa787c65b0fad6be/view',
+    title: "Belajar Fundamental Front-End Web Development",
+    issuer: "Dicoding Indonesia",
+    image: "/fundamental-front-end.webp",
+    link: "https://www.dicoding.com/dicodingassets/coursecertificate/324a8081369090c9e920c6fefa787c65b0fad6be/view",
   },
   {
     id: 2,
-    title: 'Belajar Fundamental Aplikasi Web dengan React',
-    issuer: 'Dicoding Indonesia',
-    image: '/fundamental-react.webp',
-    link: 'https://www.dicoding.com/dicodingassets/coursecertificate/5304c6faa81c59d78d07caa32e8a158bdb253d53/view',
+    title: "Belajar Fundamental Aplikasi Web dengan React",
+    issuer: "Dicoding Indonesia",
+    image: "/fundamental-react.webp",
+    link: "https://www.dicoding.com/dicodingassets/coursecertificate/5304c6faa81c59d78d07caa32e8a158bdb253d53/view",
   },
   {
     id: 3,
-    title: 'Belajar Fundamental Back-End dengan JavaScript',
-    issuer: 'Dicoding Indonesia',
-    image: '/fundamental-backend.webp',
-    link: 'https://www.dicoding.com/dicodingassets/coursecertificate/55243985356be883881414923d9524bf00644800/view',
+    title: "Belajar Fundamental Back-End dengan JavaScript",
+    issuer: "Dicoding Indonesia",
+    image: "/fundamental-backend.webp",
+    link: "https://www.dicoding.com/dicodingassets/coursecertificate/55243985356be883881414923d9524bf00644800/view",
   },
   {
     id: 4,
-    title: 'Menjadi React Web Developer Expert',
-    issuer: 'Dicoding Indonesia',
-    image: '/expert-react.webp',
-    link: 'https://www.dicoding.com/dicodingassets/coursecertificate/50941f0e3af4f895cd5ff266eda160594b4bf37e/view',
+    title: "Menjadi React Web Developer Expert",
+    issuer: "Dicoding Indonesia",
+    image: "/expert-react.webp",
+    link: "https://www.dicoding.com/dicodingassets/coursecertificate/50941f0e3af4f895cd5ff266eda160594b4bf37e/view",
   },
   {
     id: 5,
-    title: 'Lulus Program Dicoding Asah X Accenture',
-    issuer: 'Dicoding Indonesia',
-    image: '/dicoding-Asah.webp',
-    link: 'https://drive.google.com/file/d/1fiJ8Fl_nHzo4IwzRAVzSm43hk1ZlrGtf/view?usp=sharing',
+    title: "Menjadi Back-End Developer Expert dengan JavaScript",
+    issuer: "Dicoding Indonesia",
+    image: "/expert-backend.webp",
+    link: "https://www.dicoding.com/dicodingassets/coursecertificate/aed014aadcdcdceed8679c8542dabf29f290c20b/view",
   },
-]
+  {
+    id: 6,
+    title: "Lulus Program Dicoding Asah X Accenture",
+    issuer: "Dicoding Indonesia",
+    image: "/dicoding-Asah.webp",
+    link: "https://drive.google.com/file/d/1fiJ8Fl_nHzo4IwzRAVzSm43hk1ZlrGtf/view?usp=sharing",
+  },
+];
 
 const Certificates = () => {
   return (
     <section className="py-32 px-6 bg-[#362EED]/80">
       <div className="max-w-[1700px] mx-auto flex flex-col items-center">
-
         {/* HEADER */}
         <div className="text-center mb-24">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -50,22 +56,19 @@ const Certificates = () => {
 
         {/* GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 justify-items-center">
-
           {certificates.map((cert) => (
             <CertificateCard key={cert.id} cert={cert} />
           ))}
-
         </div>
-
       </div>
     </section>
-  )
-}
+  );
+};
 
 const CertificateCard = ({ cert }) => {
   return (
     <div
-      className={`
+      className="
         group relative w-full max-w-[480px] lg:col-span-2
         rounded-[30px] overflow-hidden
         border border-white/10
@@ -76,14 +79,9 @@ const CertificateCard = ({ cert }) => {
         shadow-md
 
         transition-transform duration-300
-
         hover:-translate-y-2
-
-        ${cert.id === 4 ? 'lg:col-start-2' : ''}
-        ${cert.id === 5 ? 'lg:col-start-4' : ''}
-      `}
+      "
     >
-
       {/* IMAGE */}
       <div className="h-[330px] overflow-hidden">
         <img
@@ -113,9 +111,7 @@ const CertificateCard = ({ cert }) => {
           {cert.title}
         </h3>
 
-        <p className="text-slate-300 text-base mt-4">
-          {cert.issuer}
-        </p>
+        <p className="text-slate-300 text-base mt-4">{cert.issuer}</p>
 
         <a
           href={cert.link}
@@ -132,9 +128,8 @@ const CertificateCard = ({ cert }) => {
           View Certificate
         </a>
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Certificates
+export default Certificates;
