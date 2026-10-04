@@ -1,50 +1,55 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
-import jsLogo from '../assets/javascript.svg'
-import tailwindLogo from '../assets/tailwind.svg'
-import sassLogo from '../assets/sass.svg'
-import reactLogo from '../assets/react.svg'
-import reduxLogo from '../assets/redux.svg'
-import nodeLogo from '../assets/nodejs.svg'
-import expressLogo from '../assets/express-js.svg'
-import mongoLogo from '../assets/mongo.svg'
-import postgreLogo from '../assets/postgresql.svg'
+import jsLogo from "../assets/javascript.svg";
+import tailwindLogo from "../assets/tailwind.svg";
+import sassLogo from "../assets/sass.svg";
+import reactLogo from "../assets/react.svg";
+import reduxLogo from "../assets/redux.svg";
+import nodeLogo from "../assets/nodejs.svg";
+import expressLogo from "../assets/express-js.svg";
+import mongoLogo from "../assets/mongo.svg";
+import postgreLogo from "../assets/postgresql.svg";
+import phpLogo from "../assets/php.svg";
+import laravelLogo from "../assets/laravel.svg";
+import mysqlLogo from "../assets/mysql.svg";
 
 const skills = [
-  { name: 'JavaScript', image: jsLogo },
-  { name: 'Tailwind', image: tailwindLogo },
-  { name: 'Sass', image: sassLogo },
-  { name: 'React', image: reactLogo },
-  { name: 'Redux', image: reduxLogo },
-  { name: 'Node.js', image: nodeLogo },
-  { name: 'Express', image: expressLogo },
-  { name: 'MongoDB', image: mongoLogo },
-  { name: 'PostgreSQL', image: postgreLogo },
-]
+  { name: "JavaScript", image: jsLogo, scale: "scale-100" },
+  { name: "React", image: reactLogo, scale: "scale-100" },
+  { name: "Redux", image: reduxLogo, scale: "scale-100" },
+  { name: "Tailwind CSS", image: tailwindLogo, scale: "scale-100" },
+  { name: "Sass", image: sassLogo, scale: "scale-110" },
+  { name: "Node.js", image: nodeLogo, scale: "scale-105" },
+  { name: "Express.js", image: expressLogo, scale: "scale-110" },
+  { name: "PHP", image: phpLogo, scale: "scale-125" },
+  { name: "Laravel", image: laravelLogo, scale: "scale-125" },
+  { name: "PostgreSQL", image: postgreLogo, scale: "scale-110" },
+  { name: "MongoDB", image: mongoLogo, scale: "scale-110" },
+  { name: "MySQL", image: mysqlLogo, scale: "scale-[1.15]" },
+];
 
 const Skills = () => {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false)
-    }, 1200)
+      setLoading(false);
+    }, 1200);
 
-    return () => clearTimeout(timer)
-  }, [])
+    return () => clearTimeout(timer);
+  }, []);
 
   if (loading) {
     return (
       <section className="py-32 px-6 bg-[#362EED]/80">
         <div className="max-w-6xl mx-auto">
-
           <div className="text-center mb-16">
             <div className="h-5 w-24 mx-auto rounded bg-white/20 animate-pulse mb-4" />
             <div className="h-12 w-96 max-w-full mx-auto rounded bg-white/20 animate-pulse" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-            {[...Array(9)].map((_, index) => (
+            {[...Array(12)].map((_, index) => (
               <div
                 key={index}
                 className="
@@ -57,16 +62,14 @@ const Skills = () => {
               />
             ))}
           </div>
-
         </div>
       </section>
-    )
+    );
   }
 
   return (
     <section className="py-32 px-6 bg-[#362EED]/80">
       <div className="max-w-6xl mx-auto">
-
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white">
             Technologies I Work With
@@ -75,17 +78,13 @@ const Skills = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {skills.map((skill) => (
-            <SkillCard
-              key={skill.name}
-              skill={skill}
-            />
+            <SkillCard key={skill.name} skill={skill} />
           ))}
         </div>
-
       </div>
     </section>
-  )
-}
+  );
+};
 
 const SkillCard = ({ skill }) => {
   return (
@@ -143,20 +142,24 @@ const SkillCard = ({ skill }) => {
       />
 
       <div className="relative z-10 flex flex-col items-center gap-5">
-
-        <img
-          src={skill.image}
-          alt={skill.name}
-          className="
-            w-20
-            h-20
-            object-contain
-            transition-all duration-700
-            group-hover:scale-150
-            group-hover:rotate-[360deg]
-            group-hover:drop-shadow-[0_0_25px_rgba(56,189,248,0.9)]
-          "
-        />
+        <div className="w-20 h-20 flex items-center justify-center">
+          <img
+            src={skill.image}
+            alt={`${skill.name} logo`}
+            loading="lazy"
+            className={`
+              w-20
+              h-20
+              object-contain
+              ${skill.scale}
+              transition-all
+              duration-700
+              group-hover:scale-150
+              group-hover:rotate-[360deg]
+              group-hover:drop-shadow-[0_0_25px_rgba(56,189,248,0.9)]
+            `}
+          />
+        </div>
 
         <p
           className="
@@ -170,10 +173,9 @@ const SkillCard = ({ skill }) => {
         >
           {skill.name}
         </p>
-
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
