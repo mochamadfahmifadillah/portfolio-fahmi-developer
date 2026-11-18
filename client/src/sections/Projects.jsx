@@ -8,7 +8,7 @@ const projects = [
       'Building Software Empire is a landing page website for software company that provides software development services with responsive layout and interactive UI.',
     image: '/software-empire.png',
     stack: ['React', 'Laravel', 'Rest API'],
-    github: 'https://github.com/mochamadfahmifadillah',
+    github: 'https://github.com/mochamadfahmifadillah/project-intern',
     demo: '#',
   },
   {
