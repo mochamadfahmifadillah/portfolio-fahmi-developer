@@ -9,7 +9,7 @@ const projects = [
     image: '/software-empire.png',
     stack: ['React', 'Laravel', 'Rest API'],
     github: 'https://github.com/mochamadfahmifadillah/project-intern',
-    demo: '#',
+    demo: 'https://project-software-empire.vercel.app/',
   },
   {
     id: 2,
