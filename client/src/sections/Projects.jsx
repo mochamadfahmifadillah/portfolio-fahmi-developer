@@ -3,11 +3,11 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 const projects = [
   {
     id: 1,
-    title: 'Kirava Logistics',
+    title: 'Software Empire',
     description:
-      'Logistics management website focused on shipment tracking, responsive UI, and business workflow optimization.',
-    image: '/Kirava-LandingPage.png',
-    stack: ['React', 'Tailwind CSS', 'API'],
+      'Building Software Empire is a landing page website for software company that provides software development services with responsive layout and interactive UI.',
+    image: '/software-empire.png',
+    stack: ['React', 'Laravel', 'Rest API'],
     github: 'https://github.com/mochamadfahmifadillah',
     demo: '#',
   },
